@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.testapp.testappkotlin.BuildConfig"/>
+
+        <variable
+                name="item"
+                type="com.testapp.testappkotlin.presentation.videolist.list.VideoListItem"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:onClick="@{item::onClick}"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/padding_small"
+                    app:url="@{BuildConfig.BASE_IMAGE_URL + item.video.poster_path}"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorPrimaryHalfVisible"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="@dimen/padding_small"
+                    android:text="@{item.video.title}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_xxlarge"/>
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

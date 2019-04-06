@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TestAppKotlin</string>
+
+    <string name="main_error_dialog_message">Unexpected error occurred</string>
+    <string name="main_error_dialog_title">Error</string>
+
+    <string name="main_message_dialog_message">Something happened</string>
+    <string name="main_message_dialog_title">Message</string>
+
+    <string name="menu_item">Time range</string>
+
+</resources>
